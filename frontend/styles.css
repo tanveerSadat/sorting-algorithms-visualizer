@@ -1,0 +1,36 @@
+body {
+  margin: 0;           
+  height: 100vh;            
+  display: flex;            
+  justify-content: center;
+  text-align: center;        
+  font-family: Arial, sans-serif;
+  background-color: #04001e;
+  color: white;
+}
+
+.main_container {
+  width: 80%;             
+  max-width: 800px;       
+  background-color: #08003b; 
+  color: white;
+  padding: 20px;         
+  text-align: center;
+}
+
+.solution_container {            
+  background-color: #0d005f; 
+  color: white;
+  padding: 20px;           
+  text-align: center;
+}
+
+ul {
+  list-style: none;  
+  padding: 0;        
+  margin: 0;         
+}
+
+ul li {
+  margin: 8px 0;     
+}
