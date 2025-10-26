@@ -51,7 +51,7 @@ class MyHandler( BaseHTTPRequestHandler ):
             try:
                 self.path = '/frontend/main.html'
 
-                fp = open( '.'+self.path )
+                fp = open( '..'+self.path )
                 content = fp.read()
 
                 self.send_response( 200 )
@@ -72,7 +72,7 @@ class MyHandler( BaseHTTPRequestHandler ):
         elif parsed.path in [ '/main.html' ]:
 
             try:
-                fp = open( './frontend'+self.path )
+                fp = open( '../frontend'+self.path )
                 content = fp.read()
 
                 self.send_response( 200 )
@@ -93,7 +93,7 @@ class MyHandler( BaseHTTPRequestHandler ):
         elif parsed.path in [ '/bubblesort.html' ]:
 
             try:
-                fp = open( './frontend'+self.path )
+                fp = open( '../frontend'+self.path )
                 content = fp.read()
 
                 self.send_response( 200 )
@@ -114,7 +114,7 @@ class MyHandler( BaseHTTPRequestHandler ):
         elif parsed.path in [ '/selectionsort.html' ]:
 
             try:
-                fp = open( './frontend'+self.path )
+                fp = open( '../frontend'+self.path )
                 content = fp.read()
 
                 self.send_response( 200 )
@@ -135,7 +135,7 @@ class MyHandler( BaseHTTPRequestHandler ):
         elif parsed.path in [ '/styles.css' ]:
 
             try:
-                fp = open( './frontend'+self.path )
+                fp = open( '../frontend'+self.path )
                 content = fp.read()
 
                 self.send_response( 200 )
@@ -156,7 +156,7 @@ class MyHandler( BaseHTTPRequestHandler ):
         elif parsed.path in [ '/script.js' ]:
 
             try:
-                fp = open( './frontend'+self.path )
+                fp = open( '../frontend'+self.path )
                 content = fp.read()
 
                 self.send_response( 200 )

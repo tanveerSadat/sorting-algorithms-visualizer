@@ -76,7 +76,6 @@ function updateBubbleSortSolution(data){
                 cell.textContent = "";
             }
             
-
             row2.appendChild(cell);
         });
         table.appendChild(row2);
@@ -85,8 +84,7 @@ function updateBubbleSortSolution(data){
         arr.forEach(() => {
             var cell = document.createElement("td");
             cell.textContent = "";
-            cell.style.border = "1px solid black";
-            cell.style.padding = "5px";
+            cell.style.padding = "12px";
             row3.appendChild(cell);
         });
         table.appendChild(row3);
@@ -180,7 +178,7 @@ function updateSelectionSortSolution(data){
         arr.forEach((_, index) => {
             var cell = document.createElement("td");
             cell.style.border = "1px solid black";
-            cell.style.padding = "5px";
+            cell.style.padding = "12px";
             cell.style.textAlign = "center";
             cell.style.backgroundColor  = "#000000ff"
 
@@ -197,8 +195,7 @@ function updateSelectionSortSolution(data){
         arr.forEach(() => {
             var cell = document.createElement("td");
             cell.textContent = "";
-            cell.style.border = "1px solid black";
-            cell.style.padding = "5px";
+            cell.style.padding = "12px";
             row4.appendChild(cell);
         });
         table.appendChild(row4);

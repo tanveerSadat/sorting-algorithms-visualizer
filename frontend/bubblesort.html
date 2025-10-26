@@ -4,28 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sorting Algorithm Visualizer</title>
-
   <link rel="stylesheet" href="styles.css" />
-
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
 <div class="main_container">
 
     <header>
-        <h1>Sorting Algorithm Visualizer</h1>
-        <h2>Bubble Sort</h2> 
+        <h1>Bubble Sort</h1> 
     </header>
-
     <main>
-        <p>This page is for bubble sort. <a href="main.html">Go Back.</a></p>
-        
+        <p>This page is for bubble sort. <a href="main.html" class="btn">Go Back</a></p> 
+        <!-- add a reset button after the sorting -->
         <input type="text" id="bubblesortinput" value="[1, 3, 2, 4, 5, 7, 6]">
         <button id="bubblesortbutton" onClick="getBubbleSort()">Sort</button>
     </main>
 
     <div id="bubblesortsolution" class="solution_container">
-        <p>Sample Solution</p>
+        <p><b>Solution:</b></p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
