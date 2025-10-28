@@ -2,9 +2,9 @@ name: Sorting Visualizer CI
 
 on:
   push:
-    branches: [ "**" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "**" ]
+    branches: [ main ]
 
 jobs:
   test:
@@ -23,9 +23,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install selenium pytest
+          pip install selenium webdriver-manager pytest
 
-      - name: Set up Chrome for Selenium
+      - name: Set CI flag
+        run: echo "CI=true" >> $GITHUB_ENV
+
+      - name: Set up Chrome
         uses: browser-actions/setup-chrome@v1
 
       - name: Verify Chrome installation
@@ -37,8 +40,6 @@ jobs:
           pytest -v tests/algos_test.py
 
       - name: Run frontend Selenium tests
-        env:
-          DISPLAY: :99
         run: |
           cd frontend
           pytest -v tests/selenium_test.py

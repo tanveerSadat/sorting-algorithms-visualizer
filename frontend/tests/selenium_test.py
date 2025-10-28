@@ -1,6 +1,7 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 import os
 
 #  python frontend/tests/selenium_test.py
@@ -16,9 +17,22 @@ class TestFrontendPages(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # Sets up the Chrome WebDriver instance before running tests
-        cls.driver = webdriver.Chrome()
-        cls.driver.implicitly_wait(3)
+        from selenium.webdriver.chrome.service import Service
+        from selenium.webdriver.chrome.options import Options
+        from webdriver_manager.chrome import ChromeDriverManager
 
+        options = Options()
+        # Always use headless mode in CI, but still allow GUI when running locally
+        if os.getenv("CI", "false") == "true":
+            options.add_argument("--headless=new")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+
+        # Use WebDriverManager to auto-install ChromeDriver
+        service = Service(ChromeDriverManager().install())
+        cls.driver = webdriver.Chrome(service=service, options=options)
+        cls.driver.implicitly_wait(3)
+        
         # Base path to local frontend folder
         cls.base_path = os.path.abspath("./frontend")
 
