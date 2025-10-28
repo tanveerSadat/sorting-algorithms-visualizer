@@ -49,7 +49,7 @@ function updateBubbleSortSolution(data){
             cell.style.border = "1px solid black";
             cell.style.padding = "5px";
             cell.style.textAlign = "center";
-            cell.style.backgroundColor  = "#000000ff"
+            cell.style.backgroundColor  = "#ffffffff"
             row1.appendChild(cell);
         });
         table.appendChild(row1);
@@ -60,7 +60,7 @@ function updateBubbleSortSolution(data){
             cell.style.border = "1px solid black";
             cell.style.padding = "5px";
             cell.style.textAlign = "center";
-            cell.style.backgroundColor  = "#000000ff"
+            cell.style.backgroundColor  = "#ffffffff"
 
             if (index === iIndex && index === jIndex) {
                 cell.textContent = "i,j";
@@ -68,10 +68,10 @@ function updateBubbleSortSolution(data){
                 cell.textContent = "i";
             } else if (index === jIndex) {
                 cell.textContent = "j";
-                cell.style.backgroundColor = swapped ? "#5e905eff" : "#000000ff";
+                cell.style.backgroundColor = swapped ? "#5e905eff" : "#ffffffff";
             } else if (index === jIndex + 1) {
                 cell.textContent = "j + 1";
-                cell.style.backgroundColor = swapped ? "#5e905eff" : "#000000ff";
+                cell.style.backgroundColor = swapped ? "#5e905eff" : "#ffffffff";
             } else {
                 cell.textContent = "";
             }
@@ -145,7 +145,7 @@ function updateSelectionSortSolution(data){
             cell.style.border = "1px solid black";
             cell.style.padding = "5px";
             cell.style.textAlign = "center";
-            cell.style.backgroundColor  = "#000000ff"
+            cell.style.backgroundColor  = "#ffffffff"
             row1.appendChild(cell);
         });
         table.appendChild(row1);
@@ -156,14 +156,14 @@ function updateSelectionSortSolution(data){
             cell.style.border = "1px solid black";
             cell.style.padding = "5px";
             cell.style.textAlign = "center";
-            cell.style.backgroundColor  = "#000000ff"
+            cell.style.backgroundColor  = "#ffffffff"
 
             if (index === iIndex && index === jIndex) {
                 cell.textContent = "i,j";
-                cell.style.backgroundColor = swapped ? "#5e905eff" : "#000000ff";
+                cell.style.backgroundColor = swapped ? "#5e905eff" : "#ffffffff";
             } else if (index === iIndex) {
                 cell.textContent = "i";
-                cell.style.backgroundColor = swapped ? "#5e905eff" : "#000000ff";
+                cell.style.backgroundColor = swapped ? "#5e905eff" : "#f0f0f0ff";
             } else if (index === jIndex) {
                 cell.textContent = "j";
             } else {
@@ -180,11 +180,11 @@ function updateSelectionSortSolution(data){
             cell.style.border = "1px solid black";
             cell.style.padding = "12px";
             cell.style.textAlign = "center";
-            cell.style.backgroundColor  = "#000000ff"
+            cell.style.backgroundColor  = "#ffffffff"
 
             if (index === mIndex) {
                 cell.textContent = "m";
-                cell.style.backgroundColor = swapped ? "#5e905eff" : "#000000ff";
+                cell.style.backgroundColor = swapped ? "#5e905eff" : "#ffffffff";
             }
 
             row3.appendChild(cell);

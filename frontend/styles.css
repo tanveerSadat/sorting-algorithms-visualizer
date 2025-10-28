@@ -20,7 +20,7 @@ body {
 
 .solution_container {            
   background-color: #007BFF; 
-  color: white;
+  color: rgb(0, 0, 0);
   margin-top: 20px;
   padding: 30px;           
   text-align: center;
