@@ -40,6 +40,4 @@ jobs:
           pytest -v tests/algos_test.py
 
       - name: Run frontend Selenium tests
-        run: |
-          cd frontend
-          pytest -v tests/selenium_test.py
+        run: pytest frontend/tests/selenium_test.py
