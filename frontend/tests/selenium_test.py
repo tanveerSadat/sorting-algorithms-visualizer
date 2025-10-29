@@ -22,18 +22,16 @@ class TestFrontendPages(unittest.TestCase):
         from webdriver_manager.chrome import ChromeDriverManager
 
         options = Options()
-        # Always use headless mode in CI, but still allow GUI when running locally
-        if os.getenv("CI", "false") == "true":
-            options.add_argument("--headless=new")
+        # Headless mode for CI
+        options.add_argument("--headless=new")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--window-size=1920,1080")
 
-        # Use WebDriverManager to auto-install ChromeDriver
         service = Service(ChromeDriverManager().install())
         cls.driver = webdriver.Chrome(service=service, options=options)
-        cls.driver.implicitly_wait(3)
-        
-        # Base path to local frontend folder
+
         cls.base_path = os.path.abspath("./frontend")
 
     # Tests that the main page loads and contains the correct title
