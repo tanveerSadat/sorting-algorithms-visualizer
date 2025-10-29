@@ -19,65 +19,65 @@ import selectionsort
 class TestBubbleSort:
     """Test cases for bubble sort implementation"""
 
-    def test_empty_array(self):
-        """Test sorting an empty array"""
-        arr = []
-        bubblesort.bubbleSort(arr)
-        assert arr == []
+    # def test_empty_array(self):
+    #     """Test sorting an empty array"""
+    #     arr = []
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == []
 
-    def test_single_element(self):
-        """Test sorting a single element array"""
-        arr = [5]
-        bubblesort.bubbleSort(arr)
-        assert arr == [5]
+    # def test_single_element(self):
+    #     """Test sorting a single element array"""
+    #     arr = [5]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [5]
 
-    def test_already_sorted(self):
-        """Test sorting an already sorted array"""
-        arr = [1, 2, 3, 4, 5]
-        bubblesort.bubbleSort(arr)
-        assert arr == [1, 2, 3, 4, 5]
+    # def test_already_sorted(self):
+    #     """Test sorting an already sorted array"""
+    #     arr = [1, 2, 3, 4, 5]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [1, 2, 3, 4, 5]
 
-    def test_reverse_sorted(self):
-        """Test sorting a reverse sorted array (worst case)"""
-        arr = [5, 4, 3, 2, 1]
-        bubblesort.bubbleSort(arr)
-        assert arr == [1, 2, 3, 4, 5]
+    # def test_reverse_sorted(self):
+    #     """Test sorting a reverse sorted array (worst case)"""
+    #     arr = [5, 4, 3, 2, 1]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [1, 2, 3, 4, 5]
 
-    def test_unsorted_array(self):
-        """Test sorting a random unsorted array"""
-        arr = [3, 1, 4, 1, 5, 9, 2, 6]
-        bubblesort.bubbleSort(arr)
-        assert arr == [1, 1, 2, 3, 4, 5, 6, 9]
+    # def test_unsorted_array(self):
+    #     """Test sorting a random unsorted array"""
+    #     arr = [3, 1, 4, 1, 5, 9, 2, 6]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [1, 1, 2, 3, 4, 5, 6, 9]
 
-    def test_duplicate_elements(self):
-        """Test sorting an array with duplicate elements"""
-        arr = [3, 3, 1, 1, 2, 2]
-        bubblesort.bubbleSort(arr)
-        assert arr == [1, 1, 2, 2, 3, 3]
+    # def test_duplicate_elements(self):
+    #     """Test sorting an array with duplicate elements"""
+    #     arr = [3, 3, 1, 1, 2, 2]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [1, 1, 2, 2, 3, 3]
 
-    def test_negative_numbers(self):
-        """Test sorting an array with negative numbers"""
-        arr = [-3, -1, -4, 0, 2, 1]
-        bubblesort.bubbleSort(arr)
-        assert arr == [-4, -3, -1, 0, 1, 2]
+    # def test_negative_numbers(self):
+    #     """Test sorting an array with negative numbers"""
+    #     arr = [-3, -1, -4, 0, 2, 1]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [-4, -3, -1, 0, 1, 2]
 
-    def test_large_array(self):
-        """Test sorting a larger array"""
-        arr = [9, 7, 5, 3, 1, 2, 4, 6, 8, 10]
-        bubblesort.bubbleSort(arr)
-        assert arr == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    # def test_large_array(self):
+    #     """Test sorting a larger array"""
+    #     arr = [9, 7, 5, 3, 1, 2, 4, 6, 8, 10]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-    def test_two_elements_sorted(self):
-        """Test sorting two elements already in order"""
-        arr = [1, 2]
-        bubblesort.bubbleSort(arr)
-        assert arr == [1, 2]
+    # def test_two_elements_sorted(self):
+    #     """Test sorting two elements already in order"""
+    #     arr = [1, 2]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [1, 2]
 
-    def test_two_elements_unsorted(self):
-        """Test sorting two elements not in order"""
-        arr = [2, 1]
-        bubblesort.bubbleSort(arr)
-        assert arr == [1, 2]
+    # def test_two_elements_unsorted(self):
+    #     """Test sorting two elements not in order"""
+    #     arr = [2, 1]
+    #     bubblesort.bubbleSort(arr)
+    #     assert arr == [1, 2]
 
     #a1
     def test_a1b1c1d2e2(self):
@@ -267,66 +267,185 @@ class TestBubbleSortWithSteps:
 class TestSelectionSort:
     """Test cases for selection sort implementation"""
 
-    def test_empty_array(self):
-        """Test sorting an empty array"""
+    # def test_empty_array(self):
+    #     """Test sorting an empty array"""
+    #     arr = []
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == []
+
+    # def test_single_element(self):
+    #     """Test sorting a single element array"""
+    #     arr = [5]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [5]
+
+    # def test_already_sorted(self):
+    #     """Test sorting an already sorted array"""
+    #     arr = [1, 2, 3, 4, 5]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [1, 2, 3, 4, 5]
+
+    # def test_reverse_sorted(self):
+    #     """Test sorting a reverse sorted array"""
+    #     arr = [5, 4, 3, 2, 1]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [1, 2, 3, 4, 5]
+
+    # def test_unsorted_array(self):
+    #     """Test sorting a random unsorted array"""
+    #     arr = [3, 1, 4, 1, 5, 9, 2, 6]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [1, 1, 2, 3, 4, 5, 6, 9]
+
+    # def test_duplicate_elements(self):
+    #     """Test sorting an array with duplicate elements"""
+    #     arr = [3, 3, 1, 1, 2, 2]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [1, 1, 2, 2, 3, 3]
+
+    # def test_negative_numbers(self):
+    #     """Test sorting an array with negative numbers"""
+    #     arr = [-3, -1, -4, 0, 2, 1]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [-4, -3, -1, 0, 1, 2]
+
+    # def test_large_array(self):
+    #     """Test sorting a larger array"""
+    #     arr = [9, 7, 5, 3, 1, 2, 4, 6, 8, 10]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    # def test_two_elements_sorted(self):
+    #     """Test sorting two elements already in order"""
+    #     arr = [1, 2]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [1, 2]
+
+    # def test_two_elements_unsorted(self):
+    #     """Test sorting two elements not in order"""
+    #     arr = [2, 1]
+    #     selectionsort.selectionSort(arr)
+    #     assert arr == [1, 2]
+
+    #a1
+    def test_a1b1c1d2e2(self):
+        """a1b1c1d2e2"""
         arr = []
         selectionsort.selectionSort(arr)
         assert arr == []
 
-    def test_single_element(self):
-        """Test sorting a single element array"""
-        arr = [5]
+    #a2
+    def test_a2b1c2d1e2(self):
+        """a2b1c2d1e2"""
+        arr = [0]
         selectionsort.selectionSort(arr)
-        assert arr == [5]
+        assert arr == [0]
 
-    def test_already_sorted(self):
-        """Test sorting an already sorted array"""
+    def test_a2b1c2d2e1(self):
+        """a2b1c2d2e1"""
+        arr = [-1]
+        selectionsort.selectionSort(arr)
+        assert arr == [-1]
+
+    def test_a2b1c2d2e2(self):
+        """a2b1c2d2e2"""
+        arr = [1]
+        selectionsort.selectionSort(arr)
+        assert arr == [1]
+
+    #a3b1c2 sorted one unique
+    def test_a3b1c2d1e2(self):
+        """a3b1c2d1e2"""
+        arr = [0, 0]
+        selectionsort.selectionSort(arr)
+        assert arr == [0, 0]
+
+    def test_a3b1c2d2e1(self):
+        """a3b1c2d2e1"""
+        arr = [-1, -1]
+        selectionsort.selectionSort(arr)
+        assert arr == [-1, -1]
+
+    def test_a3b1c2d2e2(self):
+        """a3b1c2d2e2"""
+        arr = [1, 1]
+        selectionsort.selectionSort(arr)
+        assert arr == [1, 1]
+
+    #a3b1c3 sorted 2+ unique
+    def test_a3b1c3d1e1(self):
+        """a3b1c3d1e1"""
+        arr = [-2, -1, 0, 1, 2]
+        selectionsort.selectionSort(arr)
+        assert arr == [-2, -1, 0, 1, 2]
+
+    def test_a3b1c3d1e2(self):
+        """a3b1c3d1e2"""
+        arr = [-2, -1, 1, 2]
+        selectionsort.selectionSort(arr)
+        assert arr == [-2, -1, 1, 2]
+
+    def test_a3b1c3d2e1(self):
+        """a3b1c3d2e1"""
+        arr = [0, 1, 2, 3, 4]
+        selectionsort.selectionSort(arr)
+        assert arr == [0, 1, 2, 3, 4]
+
+    def test_a3b1c3d2e2(self):
+        """a3b1c3d2e2"""
         arr = [1, 2, 3, 4, 5]
         selectionsort.selectionSort(arr)
         assert arr == [1, 2, 3, 4, 5]
 
-    def test_reverse_sorted(self):
-        """Test sorting a reverse sorted array"""
+    # reverse more 2+ elements
+    def test_a3b2c3d1e1(self):
+        """a3b2c3d1e1"""
+        arr = [2, 1, 0, -1, -2]
+        selectionsort.selectionSort(arr)
+        assert arr == [-2, -1, 0, 1, 2]
+
+    def test_a3b2c3d1e2(self):
+        """a3b2c3d1e2"""
+        arr = [2, 1, -1, -2]
+        selectionsort.selectionSort(arr)
+        assert arr == [-2, -1, 1, 2]
+
+    def test_a3b2c3d2e1(self):
+        """a3b2c3d2e1"""
+        arr = [4, 3, 2, 1, 0]
+        selectionsort.selectionSort(arr)
+        assert arr == [0, 1, 2, 3, 4]
+
+    def test_a3b2c3d2e2(self):
+        """a3b2c3d2e2"""
         arr = [5, 4, 3, 2, 1]
         selectionsort.selectionSort(arr)
         assert arr == [1, 2, 3, 4, 5]
 
-    def test_unsorted_array(self):
-        """Test sorting a random unsorted array"""
-        arr = [3, 1, 4, 1, 5, 9, 2, 6]
+    # unsorted more 2+
+    def test_a3b3c3d1e1(self):
+        """a3b3c3d1e1"""
+        arr = [-1, -2, 1, 2, 0]
         selectionsort.selectionSort(arr)
-        assert arr == [1, 1, 2, 3, 4, 5, 6, 9]
+        assert arr == [-2, -1, 0, 1, 2]
 
-    def test_duplicate_elements(self):
-        """Test sorting an array with duplicate elements"""
-        arr = [3, 3, 1, 1, 2, 2]
+    def test_a3b3c3d1e2(self):
+        """a3b3c3d1e2"""
+        arr = [-1, -2, 1, 2]
         selectionsort.selectionSort(arr)
-        assert arr == [1, 1, 2, 2, 3, 3]
+        assert arr == [-2, -1, 1, 2]
 
-    def test_negative_numbers(self):
-        """Test sorting an array with negative numbers"""
-        arr = [-3, -1, -4, 0, 2, 1]
+    def test_a3b3c3d2e1(self):
+        """a3b3c3d2e1"""
+        arr = [1, 3, 2, 4, 0]
         selectionsort.selectionSort(arr)
-        assert arr == [-4, -3, -1, 0, 1, 2]
+        assert arr == [0, 1, 2, 3, 4]
 
-    def test_large_array(self):
-        """Test sorting a larger array"""
-        arr = [9, 7, 5, 3, 1, 2, 4, 6, 8, 10]
+    def test_a3b3c3d1e1(self):
+        """a3b3c3d1e1"""
+        arr = [1, 3, 2, 4, 5]
         selectionsort.selectionSort(arr)
-        assert arr == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-    def test_two_elements_sorted(self):
-        """Test sorting two elements already in order"""
-        arr = [1, 2]
-        selectionsort.selectionSort(arr)
-        assert arr == [1, 2]
-
-    def test_two_elements_unsorted(self):
-        """Test sorting two elements not in order"""
-        arr = [2, 1]
-        selectionsort.selectionSort(arr)
-        assert arr == [1, 2]
-
+        assert arr == [1, 2, 3, 4, 5]
 
 class TestSelectionSortWithSteps:
     """Test cases for selection sort with visualization steps"""
