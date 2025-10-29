@@ -1,57 +1,29 @@
 version: 2.1
 
-orbs:
-  python: circleci/python@2.2.0
-
 jobs:
-  tests:
+  build:
     docker:
-      - image: cimg/python:3.11
+      - image: cimg/python:3.11-browsers  # preinstalled Chrome + drivers
+
     steps:
       - checkout
 
-      # Install apt deps for Chromium (browser) and other build tools
       - run:
-          name: Install apt packages
-          command: |
-            sudo apt-get update
-            # chromium-browser provides the browser; webdriver-manager will fetch chromedriver
-            sudo apt-get install -y chromium-browser
-            # optional - useful for some environments if fonts or other packages missing
-            sudo apt-get install -y libnss3 libglib2.0-0
-
-      # Cache pip packages between runs (speed)
-      - restore_cache:
-          keys:
-            - v1-pip-deps-{{ checksum "requirements.txt" }}
-            - v1-pip-deps-
-
-      - run:
-          name: Install Python deps
+          name: Install dependencies
           command: |
             python -m pip install --upgrade pip
-            # If you keep a requirements.txt, this will use it; otherwise installs needed libs:
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install selenium webdriver-manager pytest; fi
+            pip install -r requirements.txt
 
-      - save_cache:
-          paths:
-            - ~/.cache/pip
-          key: v1-pip-deps-{{ checksum "requirements.txt" }}
-
-      # Run backend tests (from repo root)
       - run:
           name: Run backend tests
-          command: |
-            pytest -v backend/tests/algos_test.py
+          command: pytest -v backend/tests/algos_test.py
 
-      # Run frontend (Selenium) tests
       - run:
           name: Run frontend Selenium tests
-          command: |
-            # Ensure the repo root is the working dir so tests that use ./frontend/ resolve correctly
-            pytest -v frontend/tests/selenium_test.py
+          command: pytest -v frontend/tests/selenium_test.py
 
 workflows:
-  test_and_report:
+  version: 2
+  test:
     jobs:
-      - tests
+      - build
