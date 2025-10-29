@@ -79,6 +79,126 @@ class TestBubbleSort:
         bubblesort.bubbleSort(arr)
         assert arr == [1, 2]
 
+    #a1
+    def test_a1b1c1d2e2(self):
+        """a1b1c1d2e2"""
+        arr = []
+        bubblesort.bubbleSort(arr)
+        assert arr == []
+
+    #a2
+    def test_a2b1c2d1e2(self):
+        """a2b1c2d1e2"""
+        arr = [0]
+        bubblesort.bubbleSort(arr)
+        assert arr == [0]
+
+    def test_a2b1c2d2e1(self):
+        """a2b1c2d2e1"""
+        arr = [-1]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-1]
+
+    def test_a2b1c2d2e2(self):
+        """a2b1c2d2e2"""
+        arr = [1]
+        bubblesort.bubbleSort(arr)
+        assert arr == [1]
+
+    #a3b1c2 sorted one unique
+    def test_a3b1c2d1e2(self):
+        """a3b1c2d1e2"""
+        arr = [0, 0]
+        bubblesort.bubbleSort(arr)
+        assert arr == [0, 0]
+
+    def test_a3b1c2d2e1(self):
+        """a3b1c2d2e1"""
+        arr = [-1, -1]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-1, -1]
+
+    def test_a3b1c2d2e2(self):
+        """a3b1c2d2e2"""
+        arr = [1, 1]
+        bubblesort.bubbleSort(arr)
+        assert arr == [1, 1]
+
+    #a3b1c3 sorted 2+ unique
+    def test_a3b1c3d1e1(self):
+        """a3b1c3d1e1"""
+        arr = [-2, -1, 0, 1, 2]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-2, -1, 0, 1, 2]
+
+    def test_a3b1c3d1e2(self):
+        """a3b1c3d1e2"""
+        arr = [-2, -1, 1, 2]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-2, -1, 1, 2]
+
+    def test_a3b1c3d2e1(self):
+        """a3b1c3d2e1"""
+        arr = [0, 1, 2, 3, 4]
+        bubblesort.bubbleSort(arr)
+        assert arr == [0, 1, 2, 3, 4]
+
+    def test_a3b1c3d2e2(self):
+        """a3b1c3d2e2"""
+        arr = [1, 2, 3, 4, 5]
+        bubblesort.bubbleSort(arr)
+        assert arr == [1, 2, 3, 4, 5]
+
+    # reverse more 2+ elements
+    def test_a3b2c3d1e1(self):
+        """a3b2c3d1e1"""
+        arr = [2, 1, 0, -1, -2]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-2, -1, 0, 1, 2]
+
+    def test_a3b2c3d1e2(self):
+        """a3b2c3d1e2"""
+        arr = [2, 1, -1, -2]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-2, -1, 1, 2]
+
+    def test_a3b2c3d2e1(self):
+        """a3b2c3d2e1"""
+        arr = [4, 3, 2, 1, 0]
+        bubblesort.bubbleSort(arr)
+        assert arr == [0, 1, 2, 3, 4]
+
+    def test_a3b2c3d2e2(self):
+        """a3b2c3d2e2"""
+        arr = [5, 4, 3, 2, 1]
+        bubblesort.bubbleSort(arr)
+        assert arr == [1, 2, 3, 4, 5]
+
+    # unsorted more 2+
+    def test_a3b3c3d1e1(self):
+        """a3b3c3d1e1"""
+        arr = [-1, -2, 1, 2, 0]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-2, -1, 0, 1, 2]
+
+    def test_a3b3c3d1e2(self):
+        """a3b3c3d1e2"""
+        arr = [-1, -2, 1, 2]
+        bubblesort.bubbleSort(arr)
+        assert arr == [-2, -1, 1, 2]
+
+    def test_a3b3c3d2e1(self):
+        """a3b3c3d2e1"""
+        arr = [1, 3, 2, 4, 0]
+        bubblesort.bubbleSort(arr)
+        assert arr == [0, 1, 2, 3, 4]
+
+    def test_a3b3c3d1e1(self):
+        """a3b3c3d1e1"""
+        arr = [1, 3, 2, 4, 5]
+        bubblesort.bubbleSort(arr)
+        assert arr == [1, 2, 3, 4, 5]
+
 class TestBubbleSortWithSteps:
     """Test cases for bubble sort with visualization steps"""
 
