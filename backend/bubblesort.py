@@ -18,29 +18,29 @@ def bubbleSortWithSteps(arr):
 
     return steps
 
-def printStep(step):
-    arr, i, j, swapped = step
-    arrStr = " ".join(map(str, arr))
-    print(arrStr)
+# def printStep(step):
+#     arr, i, j, swapped = step
+#     arrStr = " ".join(map(str, arr))
+#     print(arrStr)
 
-    iArrow = [" "] * len(arr)
-    jArrow = [" "] * len(arr)
+#     iArrow = [" "] * len(arr)
+#     jArrow = [" "] * len(arr)
 
-    iArrow[i] = "i"
-    jArrow[j] = "j"
-    jArrow[j+1] = "J"
+#     iArrow[i] = "i"
+#     jArrow[j] = "j"
+#     jArrow[j+1] = "J"
 
-    print(" ".join(iArrow))
-    print(" ".join(jArrow))
+#     print(" ".join(iArrow))
+#     print(" ".join(jArrow))
 
-    if swapped:
-        print("Swap happened!\n")
-    else:
-        print()
+#     if swapped:
+#         print("Swap happened!\n")
+#     else:
+#         print()
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    arr = [1, 3, 2, 4, 5, 7, 6]
-    steps = bubbleSortWithSteps(arr.copy())
-    for step in steps:
-        printStep(step)
+#     arr = [1, 3, 2, 4, 5, 7, 6]
+#     steps = bubbleSortWithSteps(arr.copy())
+#     for step in steps:
+#         printStep(step)

@@ -27,33 +27,33 @@ def selectionSortWithSteps(arr):
 
     return steps
 
-def printStep(step):
-    arr, i, j, minIndex, swapped = step
-    arrStr = " ".join(map(str, arr))
-    print(arrStr)
+# def printStep(step):
+#     arr, i, j, minIndex, swapped = step
+#     arrStr = " ".join(map(str, arr))
+#     print(arrStr)
 
-    iArrow = [" "] * len(arr)
-    jArrow = [" "] * len(arr)
-    mArrow = [" "] * len(arr)
+#     iArrow = [" "] * len(arr)
+#     jArrow = [" "] * len(arr)
+#     mArrow = [" "] * len(arr)
 
-    iArrow[i] = "i"
-    jArrow[j] = "j"
-    mArrow[minIndex] = "m"
+#     iArrow[i] = "i"
+#     jArrow[j] = "j"
+#     mArrow[minIndex] = "m"
 
-    print(" ".join(iArrow))
-    print(" ".join(jArrow))
-    print(" ".join(mArrow))
+#     print(" ".join(iArrow))
+#     print(" ".join(jArrow))
+#     print(" ".join(mArrow))
 
-    if swapped:
-        print("Swap occurred!\n")
-    else:
-        print()
+#     if swapped:
+#         print("Swap occurred!\n")
+#     else:
+#         print()
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    arr = [1, 3, 2, 4, 5, 7, 6]
-    steps = selectionSortWithSteps(arr.copy())
-    for step in steps:
-        printStep(step)
+#     arr = [1, 3, 2, 4, 5, 7, 6]
+#     steps = selectionSortWithSteps(arr.copy())
+#     for step in steps:
+#         printStep(step)
             
     
