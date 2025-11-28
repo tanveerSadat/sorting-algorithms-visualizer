@@ -1,0 +1,29 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.11-browsers  # preinstalled Chrome + drivers
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: |
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+
+      - run:
+          name: Run backend tests
+          command: pytest -v backend/tests/algos_test.py
+
+      - run:
+          name: Run frontend Selenium tests
+          command: pytest -v frontend/tests/selenium_test.py
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build
